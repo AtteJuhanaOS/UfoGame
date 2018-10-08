@@ -18,7 +18,7 @@ public class UfoMovementScript : MonoBehaviour {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         float maxUfoRotation = 13.0f;
-        float moveSpeed = 15;
+        float moveSpeed = 5;
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
@@ -28,13 +28,13 @@ public class UfoMovementScript : MonoBehaviour {
         //Raycast down
         Vector3 directionDown = -ufoRaycastPoint.transform.up;
 
-        float moveUpDownSpeed = 20;
+        float moveUpDownSpeed = 10;
 
-        if(Physics.Raycast(ufoRaycastPoint.transform.position, directionDown, 3))
+        if(Physics.Raycast(ufoRaycastPoint.transform.position, directionDown, 1.75f))
         {
             transform.position = transform.position + new Vector3(0, moveUpDownSpeed * Time.deltaTime,0);
         }
-        else if(Physics.Raycast(ufoRaycastPoint.transform.position, directionDown, 3.5f))
+        else if(Physics.Raycast(ufoRaycastPoint.transform.position, directionDown, 2.0f))
         {
            
         }
