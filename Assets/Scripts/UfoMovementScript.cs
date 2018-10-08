@@ -18,7 +18,7 @@ public class UfoMovementScript : MonoBehaviour {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         float maxUfoRotation = 13.0f;
-        float moveSpeed = 5;
+        float moveSpeed = 10;
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
